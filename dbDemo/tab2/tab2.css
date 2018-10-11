@@ -1,0 +1,73 @@
+#side-con a {
+    color: #222;
+}
+
+#side-con .header {
+    margin-right: 15px;
+    font-size: 17px;
+}
+
+#side-con .side-con-tabs {
+    display: inline-block;
+    font-size: 14px;
+}
+
+#side-con .side-con-tabs a {
+    color: #888;
+}
+
+#side-con .side-con-tabs a.activeTab2 {
+    color: #111;
+    font-weight: bolder;
+}
+
+#side-con .side-con-tabs>li {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+#side-con .art-content2 .conBox2 {
+    width: 100%;
+    height: 665px;
+}
+
+#side-con .art-content2 .conBox2 {
+    display: none;
+}
+
+#side-con .art-content2 .conBox2.current2 {
+    display: block;
+}
+
+#side-con .art-content2 .conBox2 .box {
+    position: relative;
+    margin: 0 12px;
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#side-con .art-content2 .conBox2 .box .cont {
+    text-align: left;
+}
+
+#side-con .art-content2 .conBox2 .box .imgBox {
+    cursor: pointer;
+    float: left;
+    margin-right: 8px;
+}
+
+#side-con .art-content2 .conBox2 .box .cont .name {
+    color: #138A64;
+    font-size: 15px;
+}
+
+#side-con .art-content2 .conBox2 .box .cont .name:hover {
+    color: #fff;
+    background: #138A64;
+}
+
+#side-con .art-content2 .conBox2 .box .cont span {
+    color: #666;
+    font-size: 13px;
+}

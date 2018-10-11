@@ -1,0 +1,78 @@
+#artists a {
+    color: #222;
+}
+
+#artists .header {
+    margin-right: 15px;
+    font-size: 17px;
+}
+
+#artists .art-tabs {
+    display: inline-block;
+    font-size: 14px;
+}
+
+#artists .art-tabs a {
+    color: #888;
+}
+
+#artists .art-tabs a.activeTab {
+    font-size: 17px;
+    color: #111;
+}
+
+#artists .art-tabs>li {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+#artists .art-content .conBox {
+    padding: 10px 0 0 0;
+    position: relative;
+    margin-top: 5px;
+    width: 100%;
+    height: 448px;
+    text-align: center;
+    background: #F5F7F8;
+    border-top: 2px solid #02A682;
+}
+
+#artists .art-content .conBox {
+    display: none;
+}
+
+#artists .art-content .conBox.current {
+    display: block;
+}
+
+#artists .art-content .conBox .box {
+    position: relative;
+    margin: 0 12px;
+    width: 140px;
+    height: 223px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#artists .art-content .conBox .box .cont {
+    text-align: center;
+}
+
+#artists .art-content .conBox .box .imgBox {
+    cursor: pointer;
+}
+
+#artists .art-content .conBox .box .cont .name {
+    color: #138A64;
+    font-size: 15px;
+}
+
+#artists .art-content .conBox .box .cont .name:hover {
+    color: #fff;
+    background: #138A64;
+}
+
+#artists .art-content .conBox .box .cont span {
+    color: #666;
+    font-size: 13px;
+}

@@ -1,0 +1,76 @@
+ #slider .slider {
+     position: absolute;
+     top: 0;
+     left: 0;
+     height: 675px;
+     width: 4050px;
+     font-size: 0;
+ }
+ 
+ #slider .slider li {
+     float: left;
+     width: 675px;
+     height: 250px;
+ }
+ 
+ #slider .slider li img {
+     width: 675px;
+     height: 250px;
+ }
+ 
+ #slider .btn {
+     position: absolute;
+     top: 50%;
+     width: 675px;
+     text-align: center;
+     line-height: 40px;
+     cursor: pointer;
+ }
+ 
+ #slider .left {
+     position: absolute;
+     margin-top: -20px;
+     background-color: #444;
+     color: #fff;
+     height: 40px;
+     width: 40px;
+     left: 10px;
+     opacity: 0.3;
+ }
+ 
+ #slider .right {
+     position: absolute;
+     color: #fff;
+     margin-top: -20px;
+     background-color: #444;
+     height: 40px;
+     width: 40px;
+     right: 10px;
+     opacity: 0.3;
+ }
+ 
+ #slider .btn .left:hover,
+ #slider .btn .right:hover {
+     opacity: 0.8;
+ }
+ 
+ #slider .dot {
+     position: absolute;
+     width: 100%;
+     bottom: 20px;
+     text-align: center;
+ }
+ 
+ #slider .dot li {
+     display: inline-block;
+     width: 10px;
+     height: 10px;
+     margin-right: 35px;
+     background-color: #ccc;
+     border-radius: 50%;
+     cursor: pointer;
+ }
+ 
+ #slider .dot .select {
+     background-color: #f1c;
+ }
