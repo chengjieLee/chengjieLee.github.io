@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-size: 14px;
+    color: #f1f1ff;
+}
+
+.banner-top .navigation {
+    background-color: #021523
+}
+
+.banner-top .navigation .navbar-default {
+    background-color: #021523;
+    border: none;
+    color: #eee;
+}
+
+.banner-top .navigation .navbar-default .glyphicon {
+    font-size: 30px;
+}
+
+.banner-top .navigation .menu a {
+    color: #f1f1ff;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.banner-top .slide .item img {
+    width: 100%;
+    /* height: 600px; */
+}
+
+@media (max-width:1000px) {
+    .navbar {
+        max-height: 100px;
+    }
+    .banner-top .navigation .navbar-default {
+        z-index: 888;
+    }
+}
+
+.banner-top {
+    background: url('../img/timg7.jpg');
+    background-size: cover;
+    min-height: 600px;
+}
+
+.about {
+    margin-top: 15px;
+    position: relative;
+}
+
+.about .about-main .about-left-img {
+    background: url('../img/timg.jpg') no-repeat;
+    height: 550px;
+}
+
+.about .about-main .about-right h2 {
+    /* text-indent: 2em; */
+    text-align: center;
+}
+
+.about .about-main .about-right p {
+    font-size: 16px;
+    text-indent: 2em;
+    margin-bottom: 36px;
+    line-height: 2em;
+}
+
+.gallery .view {
+    text-align: center;
+}
+
+.gallery .view h3 {
+    font-weight: bolder;
+}
+
+.gallery .inner .item {
+    padding: 0
+}
+
+.gallery .inner .item img {
+    width: 100%;
+}
+
+.gallery .inner .item .box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    transform: scale(0);
+    transition: all 1s;
+    /* z-index: 88; */
+    text-align: center;
+}
+
+.gallery .inner .item:hover .box {
+    transform: scale(1);
+}
+
+.gallery .inner .box span {
+    color: #7cecd0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+}
+
+.contact {
+    width: 100%;
+    height: 500px;
+    background: url('../img/bg.jpg') no-repeat;
+    background-size: 100% 500px;
+    opacity: 0.8;
+}
+
+.contact .header {
+    text-align: center;
+    font-size: 52px;
+    color: #cf77cb;
+}
+
+.contact .header span {
+    line-height: 260px;
+}
+
+.contact .tag {
+    text-align: center;
+    font-size: 26px;
+    /* margin: 0 36px; */
+}
+
+.contact .tag .glyphicon {
+    margin: 16px;
+}
+
+.contact .tag .glyphicon-tint {
+    color: #70c6d1;
+}
+
+.contact .tag .glyphicon-globe {
+    color: #cf583b
+}
+
+.contact .tag .glyphicon-blackboard {
+    color: #484
+}
+
+.contact .tag .glyphicon-tower {
+    color: #f40;
+}
