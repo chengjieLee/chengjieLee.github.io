@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.header .nav {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header .logo {
+    position: absolute;
+    top: 10px;
+    width: 60px;
+    height: 60px;
+}
+
+.header .logo img {
+    width: 100%;
+}
+
+.header ul {
+    float: right;
+    line-height: 80px;
+}
+
+.header ul li {
+    display: inline-block;
+    margin: 0 16px;
+    color: #999;
+    cursor: pointer;
+}
+
+.header ul li:hover {
+    color: #333;
+}
+
+@media screen and (max-width: 900px) {
+    .header {
+        height: 50px;
+    }
+    .header li {
+        margin: 0 8px;
+        font-size: 13px
+    }
+    .header ul {
+        line-height: 50px;
+    }
+    .header .logo {
+        position: absolute;
+        top: 4px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .header ul {
+        display: none;
+    }
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    height: 700px;
+}
+
+.content>#slider {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    /* border: 1px solid black; */
+    overflow: hidden;
+}
+
+@media screen and (max-width:900px) {
+    .content {
+        height: 600px;
+    }
+    .content>#slider {
+        height: 500px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .content {
+        height: 500px;
+    }
+    .content>#slider {
+        height: 450px;
+    }
+}
+
+.content .tran {
+    position: absolute;
+    width: 70%;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: 16%;
+    background-color: #fff;
+}
+
+.content .tran ul {
+    display: flex;
+}
+
+.content .tran ul li {
+    flex: 1;
+}
+
+@media screen and (max-width:400px) {
+    .content {
+        height: 450px;
+    }
+    .content>#slider {
+        height: 350px;
+    }
+    .content .tran {
+        display: none;
+    }
+}
+
+.project {
+    margin-top: 45px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.project .list {
+    width: 100%;
+}
+
+.project .list div {
+    display: inline-block;
+    width: 240px;
+    height: 150px;
+    margin: 20px;
+}
+
+.project .list div img {
+    width: 100%;
+}
+
+@media screen and (max-width:900px) {
+    .project .list div {
+        width: 220px;
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .project .list div {
+        width: 450px;
+        margin: 10px auto;
+    }
+}
