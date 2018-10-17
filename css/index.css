@@ -309,3 +309,8 @@
         transform: rotate3d(0, 0, 0, 0deg)
     }
 }
+@media screen and (max-width:1000px){
+    .show-ability{
+        display: none;
+    }
+}
