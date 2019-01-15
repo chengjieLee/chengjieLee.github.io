@@ -15,14 +15,14 @@ function bindTouch() {
     var left = offset.left;
     var width = offset.width;
 
-    $scope.on("touchstart", ".slider-pointer", function() {})
-        .on("touchmove", ".slider-pointer", function(e) {
+    $scope.on("touchstart", ".slider-pointer", function () {})
+        .on("touchmove", ".slider-pointer", function (e) {
             var x = e.changedTouches[0].clientX;
             var per = (x - left) / width;
             if (per > 0 && per < 1) {
                 root.pro.update(per);
             }
-        }).on("touchend", ".slider-pointer", function(e) {
+        }).on("touchend", ".slider-pointer", function (e) {
             var x = e.changedTouches[0].clientX;
             var per = (x - left) / width;
             if (per > 0 && per <= 1) {
@@ -37,7 +37,7 @@ function bindTouch() {
 }
 
 function bindEvent() {
-    $scope.on("click", ".like", function() {
+    $scope.on("click", ".like", function () {
         if (sonList[_index].isLike) {
             sonList[_index].isLike = false;
         } else {
@@ -45,10 +45,28 @@ function bindEvent() {
         }
         root.rander(sonList[_index]);
 
-    })
-    $scope.on("click", ".next", function() {
-        newPer = 0;
+    });
+    $scope.on('click', '.list', function () {
+        $scope.find('.list-container').removeClass('none')
 
+    });
+    $scope.on('click', '.list-close', function () {
+        $scope.find('.list-container').addClass('none')
+    });
+    $scope.on("click", ".list-item", function (e) {
+        let index = e.target.dataset.index;
+        newPer = 0;
+        // root.rander(sonList[index]);
+        root.pro.start(0);
+        $scope.find('.play').removeClass('pause');
+        getIndex(index);
+        $scope.trigger("jump", index);
+        $scope.find('.list-container').addClass('none');
+    })
+
+
+    $scope.on("click", ".next", function () {
+        newPer = 0;
         if (audio.status == "play") {
             root.pro.start(0);
         } else {
@@ -61,7 +79,7 @@ function bindEvent() {
         getIndex(index);
         $scope.trigger("playChange", index);
     })
-    $scope.on("click", ".prev", function() {
+    $scope.on("click", ".prev", function () {
         newPer = 0;
         if (audio.status == "play") {
             root.pro.start(0);
@@ -74,7 +92,7 @@ function bindEvent() {
         getIndex(index);
         $scope.trigger("playChange", index);
     })
-    $scope.on("click", ".play", function() {
+    $scope.on("click", ".play", function () {
         if (audio.status == "play") {
             audio.pause();
             root.pro.stop();
@@ -85,7 +103,7 @@ function bindEvent() {
             changePlay(audio.status);
         }
     })
-    $scope.on("playChange", function(ind) {
+    $scope.on("playChange", function (ind) {
         audio.getAudio(sonList[ind._args].audios);
         if (audio.status == "play") {
             audio.play();
@@ -95,8 +113,15 @@ function bindEvent() {
         }
         root.rander(sonList[ind._args]);
         root.pro.randerOvertime(sonList[ind._args].duration)
-    })
+    });
+    $scope.on("jump", function (ind) {
+        audio.getAudio(sonList[ind._args].audios);
+        audio.play();
+        root.rander(sonList[ind._args]);
+        root.pro.randerOvertime(sonList[ind._args].duration)
+    });
 }
+
 
 function getIndex(index) {
     return _index = index;
@@ -117,8 +142,9 @@ function getData(url) {
     $.ajax({
         type: "GET",
         url: url,
-        success: function(data) {
+        success: function (data) {
             root.rander(data[0]);
+            console.log(data[0]);
             sonList = data;
             // len = data.length;
             controlManger = new root.controlManger(data.length);
@@ -126,7 +152,7 @@ function getData(url) {
             bindTouch();
             $scope.trigger("playChange", 0);
         },
-        error: function() {
+        error: function () {
             console.log('error')
         }
     })
